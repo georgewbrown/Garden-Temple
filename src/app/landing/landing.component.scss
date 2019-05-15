@@ -3,6 +3,7 @@ html { font-family: 'Inter UI', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter UI var alt', sans-serif; }
 }
+$md-desktop: 1300px;
 
 .background{
   height: 100vh;
@@ -18,7 +19,11 @@ html { font-family: 'Inter UI', sans-serif; }
   transform: translate(35em, 11em);
   position: fixed;
   margin-left: 4.5em;
+    @media screen and (max-width: $md-desktop) {
+      width: 146vh;
+  }
 }
+
 .text-block{
   margin:0;
   margin-left: 4em;
@@ -34,7 +39,12 @@ html { font-family: 'Inter UI', sans-serif; }
   position: fixed;
   text-align: center;
   transform: translate(24em,8.3em);
-  
+  @media screen and (max-width: $md-desktop) {
+    margin-left: 0px;
+    font-size: 2em;
+    padding-left: 94px;
+    padding-top: 50px;
+  }
 }
 
 button {
@@ -53,6 +63,12 @@ button {
         color:#FFF;
         position: fixed;
         margin-left: 8.5em;
+    }
+
+    .shopButton {
+      @media screen and (max-width: $md-desktop) {
+        transform: translate(32em, 19em);
+      }
     }
     
     button:hover {
