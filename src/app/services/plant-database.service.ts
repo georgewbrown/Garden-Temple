@@ -4,26 +4,26 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    "Content-Type": "application/json",
-    "Authorization": localStorage.getItem("token")
+    'Content-Type': 'application/json',
+    'Authorization': localStorage.getItem('token')
   })
-}
+};
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PlantDatabaseService {
-private _URL = "https://efa-gardenapp-backend.herokuapp.com/api/product"
+private _URL = 'https://efa-gardenapp-backend.herokuapp.com/api/product';
   constructor(private _http: HttpClient) { }
 
   getPlants(): Observable<any> {
-    return this._http.get<any>(`${this._URL}/?limit=50`)
+    return this._http.get<any>(`${this._URL}/?limit=50`);
   }
 
   deletePlant(id: number) {
-    console.log(`${this._URL}/${id}`)
-    return this._http.delete(`${this._URL}/${id}`, httpOptions)
+    console.log(`${this._URL}/${id}`);
+    return this._http.delete(`${this._URL}/${id}`, httpOptions);
   }
 
 }
