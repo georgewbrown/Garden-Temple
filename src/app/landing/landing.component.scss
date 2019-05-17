@@ -47,7 +47,7 @@ $md-desktop: 1300px;
   }
 }
 
-button {
+.shopButton {
   transform: translate(52em, 25em);
   font-size: 24px; 
         background-color: #21CF7C;
@@ -63,11 +63,9 @@ button {
         color:#FFF;
         position: fixed;
         margin-left: 8.5em;
-    }
-
-    .shopButton {
       @media screen and (max-width: $md-desktop) {
-        transform: translate(32em, 19em);
+        margin: -145px 0px 0px -275px;
+        
       }
     }
     
